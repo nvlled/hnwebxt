@@ -1,0 +1,22 @@
+{
+    "manifest_version": 2,
+    "name": "HN-Webxt",
+    "version": "1.0",
+
+    "description": "HN custom extension",
+
+    "icons": {
+        "48": "icons/hn.png"
+    },
+
+    "content_scripts": [
+        {
+            "matches": ["*://news.ycombinator.com/item?*id=*"],
+            "js": ["hn-item.js"]
+        },
+        {
+            "matches": ["*://news.ycombinator.com/*"],
+            "js": ["hn-site.js"]
+        }
+    ]
+}
